@@ -1,0 +1,29 @@
+.screen {
+  background-color: #101d1f;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #b0b3b9;
+}
+.header {
+  margin: 0;
+}
+.sub {
+  color: #02918c;
+}
+.icon {
+  width: 100%;
+  max-width: 60px;
+  height: auto;
+  margin: 20px;
+}
+.container {
+  text-align: center;
+  position: absolute;
+}
+.menu {
+  margin-top: auto;
+}
