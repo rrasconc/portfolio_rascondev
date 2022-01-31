@@ -1,0 +1,21 @@
+.menu {
+  margin-top: auto;
+}
+.item {
+  padding: 10px;
+  margin: 10px;
+  background-color: #101d1f;
+  border-width: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.item:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.icon {
+  width: 100%;
+  max-width: 60px;
+  height: auto;
+}
