@@ -1,20 +1,31 @@
-import react, { useState } from "react";
+import react, { useEffect, useState } from "react";
 import "./App.css";
 import "./assets/styles.css";
-import { Home } from "./screens/Home";
+import { Home } from "./screens/Home/Home";
+import { About } from "./screens/About/About";
+
 import { Navbar } from "./components/Navbar/Navbar";
 
 function App() {
-  const [selectedItem, setSelectedItem] = useState("about");
+  const [selectedSection, setSelectedSection] = useState("home");
+
+  const renderSection = () => {
+    if (selectedSection === "home") {
+      return <Home />;
+    }
+    if (selectedSection === "about") {
+      return <About />;
+    }
+  };
 
   return (
-    <div className="screen">
-      <Home />
+    <main className="screen">
+      {renderSection()}
       <Navbar
-        selectedItem={selectedItem}
-        handlePress={(item) => setSelectedItem(item)}
+        selectedItem={selectedSection}
+        handlePress={(item) => setSelectedSection(item)}
       />
-    </div>
+    </main>
   );
 }
 
