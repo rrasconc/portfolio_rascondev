@@ -5,7 +5,7 @@
   --secondary: #152a2d;
 }
 
-.fade-in-text {
+.fade-in {
   animation: fadeIn linear 1s;
   -webkit-animation: fadeIn linear 1s;
   -moz-animation: fadeIn linear 1s;
