@@ -4,6 +4,10 @@ import { theme } from "../../assets/theme";
 
 const sections = [
   {
+    section: "home",
+    icon: require("../../assets/user.png"),
+  },
+  {
     section: "about",
     icon: require("../../assets/user.png"),
   },
