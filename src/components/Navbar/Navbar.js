@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Navbar.css";
+import { theme } from "../../assets/theme";
 
 const sections = [
   {
@@ -16,24 +17,21 @@ const sections = [
   },
 ];
 
-export const Navbar = () => {
-  const [selectedItem, setSelectedItem] = useState("about");
-
+export const Navbar = (props) => {
   return (
     <div className="menu">
       {sections.map((item) => {
         return (
           <button
             style={
-              selectedItem === item.section
-                ? { backgroundColor: "#152A2D" }
-                : undefined
+              props.selectedItem === item.section
+                ? { backgroundColor: theme.secondary }
+                : { backgroundColor: theme.dark }
             }
             href={item.section}
-            onClick={() => {
-              setSelectedItem(item.section);
-            }}
+            onClick={() => props.handlePress(item.section)}
             className="item"
+            key={item.section}
           >
             <img src={item.icon} className="icon" />
           </button>
