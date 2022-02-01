@@ -1,0 +1,15 @@
+.container {
+  margin-bottom: 10vmin;
+}
+.description {
+  width: 100vmin;
+}
+.highlight {
+  color: var(--primary);
+}
+.profile {
+  width: 100%;
+  max-width: 30vmin;
+  border-radius: 50%;
+  margin: 20px;
+}
