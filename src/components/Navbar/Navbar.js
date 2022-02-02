@@ -5,7 +5,7 @@ import { theme } from "../../assets/theme";
 const sections = [
   {
     section: "home",
-    icon: require("../../assets/user.png"),
+    icon: require("../../assets/home.png"),
   },
   {
     section: "about",
