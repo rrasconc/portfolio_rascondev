@@ -3,22 +3,34 @@ import "./About.css";
 
 const profile = require("../../assets/profile.jpeg");
 
+const stack = [
+  {
+    name: "HTML",
+    icon: require("../../assets/html.png"),
+  },
+  {
+    name: "CSS",
+    icon: require("../../assets/css.png"),
+  },
+];
+
 export const About = () => {
   const [isStackVisible, setStackVisible] = useState(false);
+  const [stackTitle, setStackTitle] = useState("This is my tech stack");
 
   return (
     <div>
       <div className="screen">
         {!isStackVisible ? (
-          <div className="container fade-in">
+          <div className="container">
             <img src={profile} className="profile" />
-            <div className="description">
-              I am a <span className="highlight">software engineer </span>
+            <div className="description  fade-in">
+              I'm a <span className="highlight">software engineer </span>
               currently working as a mobile developer. I am really passionate
               about the frontend development and the UI designing.
             </div>
             <button
-              className="button"
+              className="button  fade-in"
               onClick={() => {
                 setStackVisible("stack");
               }}
@@ -27,8 +39,22 @@ export const About = () => {
             </button>
           </div>
         ) : (
-          <div className="container fade-in">
-            <div className="description">This is my tech stack</div>
+          <div className="stack fade-in">
+            <h2 className="title">{stackTitle}</h2>
+            <div className="stack-icons">
+              {stack.map((item) => {
+                return (
+                  <img
+                    key={item.name}
+                    src={item.icon}
+                    className="icon m-10"
+                    onMouseEnter={() => {
+                      setStackTitle(item.name);
+                    }}
+                  />
+                );
+              })}
+            </div>
           </div>
         )}
       </div>

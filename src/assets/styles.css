@@ -4,7 +4,6 @@
   --light: #b0b3b9;
   --secondary: #152a2d;
 }
-
 .button {
   border-width: 0;
   border-radius: 10px;
@@ -21,7 +20,12 @@
   -ms-transform: scale(1.1);
   transform: scale(1.1);
 }
-
+.m-10 {
+  margin: 10px;
+}
+.p-10 {
+  padding: 10px;
+}
 .fade-in {
   animation: fadeIn linear 1s;
   -webkit-animation: fadeIn linear 1s;
