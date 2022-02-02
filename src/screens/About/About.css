@@ -1,8 +1,6 @@
 .stack {
   display: flex;
-  flex: 1;
   flex-direction: column;
-  margin-bottom: 15vmin;
   text-align: center;
 }
 .description {
